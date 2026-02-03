@@ -33,4 +33,4 @@ c = a + b
 print(f"Device used: {device} ")
 print(f"Result: {c.tolist()}")
 
-print("\nOK!")
+print("\nAll good!")

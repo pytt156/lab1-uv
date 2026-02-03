@@ -18,7 +18,7 @@ Alla val är gjorda för att:
 - Alla beroenden hanteras via `uv add`
 - Exakta versioner i `uv.lock` för reproducerbarhet
 
-`Python 3.12` används då den är tillräckligt etablerad för de valda beroendena och fungerar stabilt i den aktuella miljön.
+`Python 3.12` används då den är tillräckligt etablerad för de valda beroendena och fungerar stabilt i den aktuella miljön. Har även specifierat i ***pyproject.toml*** att allt lägre än python 3.13 men högre än 3.10 fungerar, och att den skall installera de andra paketen baserat på detta.
 
 ---
 
