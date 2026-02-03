@@ -2,13 +2,14 @@
 
 ## Övergripande angreppssätt
 
-Uppgiftens syfte: att verifiera en **reproducerbar ML-miljö**,
+Uppgiftens syfte var att verifiera en **reproducerbar ML-miljö**,
 fokus har därför legat på **tydlighet och minsta möjliga komplexitet**.
 
 Alla val är gjorda för att:
-- vara lätta att granska vid rättning
 - minska risken för miljöberoende fel
 - tydligt visa *vad* som verifieras och *varför*
+
+.. framför onödig komplexibilitet/avancerad nivå.
 
 ---
 
