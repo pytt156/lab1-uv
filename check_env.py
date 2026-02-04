@@ -19,12 +19,16 @@ Ipykernel version: {ipykernel.__version__}
 if torch.cuda.is_available():
     device = torch.device("cuda")
     device_name = torch.cuda.get_device_name(0)
+    print("CUDA available")
 elif torch.backends.mps.is_available():
     device = torch.device("mps")
     device_name = "Apple Metal (MPS)"
+    print("CUDA not available, using MPS")
 else:
     device = torch.device("cpu")
     device_name = "CPU"
+    print("CUDA not available, using CPU")
+
 
 print(f"Device selected: {device} ({device_name})")
 
