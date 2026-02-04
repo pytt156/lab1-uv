@@ -66,4 +66,5 @@ Tensorberäkningen är minimal och syftar endast till att visa att:
 För ett större projekt hade jag antagligen:
 - separerat verifieringslogik i funktioner
 - lagt till tydligare exit-koder
-- eventuellt verifierat CUDA-version och drivrutin mer detaljerat och gjort det mer reproducerbart på andra maskiner
+- eventuellt verifierat CUDA-version och drivrutin mer detaljerat
+- lagt till CI för att köra scriptet på push
