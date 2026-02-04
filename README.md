@@ -19,7 +19,8 @@ Alla val är gjorda för att:
 - Alla beroenden hanteras via `uv add`
 - Exakta versioner i `uv.lock` för reproducerbarhet
 
-`Python 3.12` används då den är tillräckligt etablerad för de valda beroendena och fungerar stabilt i den aktuella miljön. Har även specifierat i ***pyproject.toml*** att allt lägre än python 3.13 men högre än 3.10 fungerar, och att den skall installera de andra paketen baserat på detta.
+`Python 3.12` används.
+Projektet är konfigurerat för Python `>=3.10,<3.13` i pyproject.toml, vilket är kompatibelt med samtliga använda beroenden.
 
 ---
 
@@ -40,14 +41,15 @@ Skriptet är avsiktligt skrivet utan hjälpfunktioner eller abstraktioner.
 Verifieringen sker i fyra steg:
 1. Python-version för att säkerställa rätt interpreter
 2. Versionsnummer för adderade paket
-3. Kontroll av CUDA-tillgänglighet via `PyTorch`
-4. Enkel tensoroperation på vald device (GPU eller CPU)
+3. Kontroll av tillgänglig beräknings-backend via PyTorch
+    - CUDA (NVIDIA)
+    - MPS (Apple Silicon)
+    - CPU (fallback)
+4. Enkel tensoroperation på vald device
 
 Tensorberäkningen är minimal och syftar endast till att visa att:
 - tensors kan allokeras på korrekt device
 - beräkningar kan utföras utan fel
-
-Ingen prestandamätning, eftersom det inte var relevant för uppgiften.
 
 ---
 
